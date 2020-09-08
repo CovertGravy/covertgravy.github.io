@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-v1",
+  "version": "1.0.0",
+  "description": "Portfolio version 1",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "looper",
+    "parcel",
+    "tailwindcss"
+  ],
+  "author": "Ashish Shaji",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
