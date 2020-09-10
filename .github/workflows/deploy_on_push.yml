@@ -22,6 +22,10 @@ jobs:
       - uses: actions/setup-node@v1.4.3
         with:
           node-version: 12
+      - uses: actions/cache@v2.1.1
+        with: 
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
       # Runs a single command using the runners shell
 #       - name: Run a one-line script
@@ -31,6 +35,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           npm ci
-          git user.email ashish.cgwcn@gmail.com
+          git config user.email ashish.cgwcn@gmail.com
           npm run predeploy
           npm run deploy
