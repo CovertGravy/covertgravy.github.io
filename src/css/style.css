@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  /* margin: 0; */
+  /* padding: 0; */
 }
 
 nav {
@@ -47,7 +49,7 @@ nav img {
 }
 
 #hero p:nth-child(2) {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,4 +71,51 @@ nav img {
 
 #hero p:nth-child(2) span:not(:last-child) {
   margin-right: 1rem;
+}
+
+#about {
+  height: calc(100vh - 60px);
+  width: 100%;
+  box-shadow: inset 1px 1px 4px rgb(0 0 0 / 47%);
+}
+
+#about h3 {
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+#about figure {
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+#about figure img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+}
+
+#about figure img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: linear-gradient(
+    305.27deg,
+    rgba(0, 0, 0, 0.7) 0.19%,
+    rgba(0, 0, 0, 0) 54.37%
+  );
 }
