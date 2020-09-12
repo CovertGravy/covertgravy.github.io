@@ -81,10 +81,10 @@ nav img {
 
 #about h3 {
   width: 100%;
-  height: 4rem;
+  /* height: 4rem; */
   text-align: center;
   margin: 0;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   font-size: 2rem;
 }
 
@@ -96,14 +96,19 @@ nav img {
   place-items: center;
 }
 
-#about figure img {
+#about figure img,
+#about figure .image-container {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   position: relative;
 }
 
-#about figure img::after {
+#about figure .image-container {
+  box-shadow: -3px 3px 3px rgb(0 0 0 / 34%);
+}
+
+#about figure .image-container::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -114,8 +119,8 @@ nav img {
   bottom: 0;
   border-radius: 50%;
   background: linear-gradient(
-    305.27deg,
-    rgba(0, 0, 0, 0.7) 0.19%,
-    rgba(0, 0, 0, 0) 54.37%
+    -126deg,
+    rgb(0 0 0 / 21%) 0.19%,
+    rgb(0 0 0 / 0%) 54.37%
   );
 }
