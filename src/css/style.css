@@ -77,7 +77,7 @@ nav img {
 #about {
   min-height: calc(100vh - 60px);
   width: 100%;
-  box-shadow: inset 1px 1px 4px rgb(0 0 0 / 47%);
+  /* box-shadow: inset 1px 1px 4px rgb(0 0 0 / 47%); */
 }
 
 #about h3 {
@@ -129,13 +129,13 @@ nav img {
 
 #about p {
   line-height: 1.7rem;
-  font-family: "Roboto Slab", serif;
-  max-width: 700px;
+  font-family: "Hind", sans-serif;
+  max-width: 650px;
   margin: 30px auto;
   text-align: center;
   font-weight: 300;
-  font-size: 1rem;
-  padding: 0 1rem;
+  font-size: 1.05rem;
+  padding: 1rem;
 }
 
 #about a {
