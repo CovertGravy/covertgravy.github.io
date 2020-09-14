@@ -27,6 +27,29 @@ nav a {
   text-decoration: none;
 }
 
+nav a.logo-anchor {
+  height: 100%;
+  width: 160px;
+}
+
+nav a.logo-anchor img {
+  height: 100%;
+  width: 100%;
+  padding: 5px 0;
+  animation-name: hue-rotate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+@keyframes hue-rotate {
+  @for $i from 0 through 100 {
+    #{$i * 1%} {
+      filter: hue-rotate(#{$i * 3.6} + deg);
+    }
+  }
+}
+
 nav img {
   margin-left: auto;
 }
@@ -104,6 +127,10 @@ nav img {
   height: 170px;
   border-radius: 50%;
   position: relative;
+}
+
+#about figure img {
+  filter: blur(0.4px);
 }
 
 #about figure .image-container {
