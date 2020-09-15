@@ -3,6 +3,7 @@
   font-family: "Montserrat", sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
+  color: #303030;
 }
 
 nav {
@@ -23,7 +24,7 @@ nav {
 
 nav a {
   font-size: 1.5rem;
-  color: black;
+  color: #1f1f1f;
   text-decoration: none;
 }
 
@@ -39,7 +40,7 @@ nav a.logo-anchor img {
   animation-name: hue-rotate;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-duration: 3s;
+  animation-duration: 7.2s;
 }
 
 @keyframes hue-rotate {
