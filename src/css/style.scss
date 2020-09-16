@@ -6,6 +6,26 @@
   color: #303030;
 }
 
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  z-index: 1000;
+}
+
+#loading img {
+  animation-name: hue-rotate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 1.8s;
+}
+
 nav {
   position: fixed;
   top: 0;
