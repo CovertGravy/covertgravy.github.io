@@ -3,6 +3,6 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"nCJ9":[function(require,module,exports) {
 
 },{"./../assets/herobg.jpg":[["herobg.0fccd89d.jpg","n9mN"],"n9mN"]}],"KIzB":[function(require,module,exports) {
-"use strict";require("normalize.css"),require("../css/style.scss"),document.onreadystatechange=function(){"complete"!==document.readyState&&console.log("loading..."),console.log(document.readyState)};
+"use strict";require("normalize.css"),require("../css/style.scss");var e=document.querySelector("#loading");document.onreadystatechange=function(){"complete"===document.readyState&&setTimeout(function(){e.style.display="none"},1800)};
 },{"normalize.css":"DOAq","../css/style.scss":"nCJ9"}]},{},["KIzB"], null)
-//# sourceMappingURL=/main.93024360.js.map
+//# sourceMappingURL=/main.ace2850e.js.map
