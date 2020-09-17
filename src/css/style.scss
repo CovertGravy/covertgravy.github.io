@@ -36,10 +36,13 @@ nav {
   align-items: center;
   height: 60px;
   padding: 0 1rem;
-  background-color: #f7f7f7;
-  background-image: linear-gradient(top, #f7f7f7, #e7e7e7);
-  box-shadow: 0px 1px 3px #aaa;
+  // background-color: #f7f7f7;
+  // background-image: linear-gradient(top, #f7f7f7, #e7e7e7);
+  // background-image: linear-gradient(top, #f7f7f7, transparent);
+  // box-shadow: 0px 1px 3px #aaa;
+  background-color: transparent;
   z-index: 999;
+  filter: invert(0.85);
 }
 
 nav a {
@@ -49,18 +52,18 @@ nav a {
 }
 
 nav a.logo-anchor {
-  height: 100%;
-  width: 160px;
+  height: 80%;
+  width: 128px;
 }
 
 nav a.logo-anchor img {
   height: 100%;
   width: 100%;
   padding: 5px 0;
-  animation-name: hue-rotate;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 7.2s;
+  // animation-name: hue-rotate;
+  // animation-timing-function: linear;
+  // animation-iteration-count: infinite;
+  // animation-duration: 7.2s;
 }
 
 @keyframes hue-rotate {
@@ -84,13 +87,23 @@ nav img {
   align-items: center;
   text-align: center;
   padding: 0 1rem;
-  background-image: url("../assets/herobg.jpg");
+  background-image: url("../assets/herobg1.jpg");
   background-size: cover;
   background-position: center;
+  background-color: #1b1b1b;
 }
 
 #hero p:nth-child(1) {
   font-size: 2.5rem;
+  color: rgb(247 247 247 / 75%);
+
+  background-clip: text;
+  background-image: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 85%),
+    rgb(255 255 255 / 40%)
+  );
+  -webkit-text-fill-color: transparent;
 }
 
 #hero p:nth-child(2) {
@@ -103,15 +116,18 @@ nav img {
 
 #hero p:nth-child(2) span {
   padding: 0 1rem;
-  /* background-color: #f7f7f7;
-  background-image: linear-gradient(top, #f7f7f7, #e7e7e7);
-  box-shadow: inset 2px 2px 2px 0 rgba(0, 0, 0, 0.2),
-    inset 2px 0px 9px 0 rgba(255, 255, 255, 0.8);
-  border-radius: 4px; */
   display: flex;
   align-items: center;
-  height: 36px;
+  // height: 36px;
   color: #1a2228;
+  color: rgb(255 255 255 / 50%);
+  background-image: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 65%),
+    rgb(255 255 255 / 50%)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #hero p:nth-child(2) span:not(:last-child) {
