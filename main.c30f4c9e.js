@@ -2,7 +2,7 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 
 },{}],"nCJ9":[function(require,module,exports) {
 
-},{"./../assets/herobg.jpg":[["herobg.0fccd89d.jpg","n9mN"],"n9mN"]}],"KIzB":[function(require,module,exports) {
-"use strict";require("normalize.css"),require("../css/style.scss");var e=document.querySelector("#loading");document.onreadystatechange=function(){"complete"===document.readyState&&setTimeout(function(){e.style.display="none"},1800)};
+},{"./../assets/herobg1.jpg":[["herobg1.d737173e.jpg","XTFC"],"XTFC"]}],"KIzB":[function(require,module,exports) {
+"use strict";require("normalize.css"),require("../css/style.scss");var e=document.querySelector("#loading"),t=document.querySelector("#hero"),n=document.querySelector("nav");document.onreadystatechange=function(){"complete"===document.readyState&&setTimeout(function(){e.style.display="none"},1800)};var r=new IntersectionObserver(function(e,t){e.forEach(function(e){e.isIntersecting?n.classList.remove("nav-scrolled"):n.classList.add("nav-scrolled")})},{rootMargin:"-100px 0px 0px 0px"});r.observe(t);
 },{"normalize.css":"DOAq","../css/style.scss":"nCJ9"}]},{},["KIzB"], null)
-//# sourceMappingURL=/main.ace2850e.js.map
+//# sourceMappingURL=/main.c30f4c9e.js.map
