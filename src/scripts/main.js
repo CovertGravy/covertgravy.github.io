@@ -3,7 +3,7 @@ import "../css/style.scss";
 
 const loadingElement = document.querySelector("#loading");
 const heroSection = document.querySelector("#hero");
-const navbar = document.querySelector("nav");
+const header = document.querySelector("header");
 
 document.onreadystatechange = function () {
   if (document.readyState === "complete") {
@@ -17,9 +17,9 @@ const heroSectionObserver = new IntersectionObserver(
   function (entries, heroSectionObserver) {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
-        navbar.classList.add("nav-scrolled");
+        header.classList.add("header-scrolled");
       } else {
-        navbar.classList.remove("nav-scrolled");
+        header.classList.remove("header-scrolled");
       }
     });
   },
