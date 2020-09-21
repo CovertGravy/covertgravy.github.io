@@ -2,7 +2,7 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 
 },{}],"nCJ9":[function(require,module,exports) {
 
-},{"./../assets/herobg1.jpg":[["herobg1.d737173e.jpg","XTFC"],"XTFC"]}],"KIzB":[function(require,module,exports) {
-"use strict";require("normalize.css"),require("../css/style.scss");var e=document.querySelector("#loading"),t=document.querySelector("#hero"),n=document.querySelector("nav");document.onreadystatechange=function(){"complete"===document.readyState&&setTimeout(function(){e.style.display="none"},1800)};var r=new IntersectionObserver(function(e,t){e.forEach(function(e){e.isIntersecting?n.classList.remove("nav-scrolled"):n.classList.add("nav-scrolled")})},{rootMargin:"-100px 0px 0px 0px"});r.observe(t);
+},{"./../assets/herobg2.jpg":[["herobg2.52e7e000.jpg","BzHP"],"BzHP"]}],"KIzB":[function(require,module,exports) {
+"use strict";require("normalize.css"),require("../css/style.scss");var e=document.querySelector("#loading"),r=document.querySelector("#hero"),t=document.querySelector("header");document.onreadystatechange=function(){"complete"===document.readyState&&setTimeout(function(){e.style.display="none"},1800)};var o=new IntersectionObserver(function(e,r){e.forEach(function(e){e.isIntersecting?t.classList.remove("header-scrolled"):t.classList.add("header-scrolled")})},{rootMargin:"-100px 0px 0px 0px"});o.observe(r);
 },{"normalize.css":"DOAq","../css/style.scss":"nCJ9"}]},{},["KIzB"], null)
-//# sourceMappingURL=/main.c30f4c9e.js.map
+//# sourceMappingURL=/main.9f0e661e.js.map
