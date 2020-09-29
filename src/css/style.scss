@@ -6,6 +6,12 @@
   color: #303030;
 }
 
+html {
+  font-size: 16px;
+  font-size: min(max(1rem, 4vw), 22px);
+  font-size: clamp(100%, 1rem, 22px);
+}
+
 #loading {
   position: fixed;
   top: 0;
@@ -143,6 +149,9 @@ header img {
 #about {
   min-height: calc(100vh - 60px);
   width: 100%;
+  display: grid;
+  place-items: center;
+  place-content: center;
   /* box-shadow: inset 1px 1px 4px rgb(0 0 0 / 47%); */
 }
 
