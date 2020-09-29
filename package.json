@@ -25,6 +25,7 @@
     "sass": "^1.26.10"
   },
   "dependencies": {
+    "locomotive-scroll": "^3.6.1",
     "normalize.css": "^8.0.1"
   },
   "postcss": {

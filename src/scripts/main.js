@@ -1,5 +1,15 @@
 import "normalize.css";
+import "../css/loco-base.css";
 import "../css/style.scss";
+
+import LocomotiveScroll from "locomotive-scroll";
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector("[data-scroll-container]"),
+  smooth: true,
+  smoothMobile: true,
+  multiplier: 2,
+});
 
 const loadingElement = document.querySelector("#loading");
 const heroSection = document.querySelector("#hero");

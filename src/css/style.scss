@@ -9,7 +9,7 @@
 html {
   font-size: 16px;
   font-size: min(max(1rem, 4vw), 22px);
-  font-size: clamp(100%, 1rem, 22px);
+  // font-size: clamp(100%, 1rem, 22px);
 }
 
 #loading {
