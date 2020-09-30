@@ -147,7 +147,8 @@ header img {
 }
 
 #about {
-  min-height: calc(100vh - 60px);
+  // min-height: calc(100vh - 60px);
+  min-height: 100vh;
   width: 100%;
   display: grid;
   place-items: center;
@@ -225,10 +226,13 @@ header img {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+  display: grid;
+  place-content: center;
+  place-items: center;
   padding: 1rem;
   background-color: #f7f7f7;
 
@@ -242,7 +246,7 @@ footer {
     place-items: center;
     gap: 3rem;
     padding: 1rem;
-    max-width: 400px;
+    // max-width: 400px;
     width: 100%;
 
     a {
