@@ -26,7 +26,8 @@
   },
   "dependencies": {
     "locomotive-scroll": "^3.6.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "topbar": "^0.1.4"
   },
   "postcss": {
     "plugins": {

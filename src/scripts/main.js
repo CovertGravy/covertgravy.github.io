@@ -2,13 +2,11 @@ import "normalize.css";
 import "../css/loco-base.css";
 import "../css/style.scss";
 
-import LocomotiveScroll from "locomotive-scroll";
+import topbar from "topbar";
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
-  smoothMobile: true,
-  multiplier: 2,
+topbar.show();
+topbar.config({
+  shadowColor: "rgba(0, 0, 0, .1)",
 });
 
 const loadingElement = document.querySelector("#loading");
@@ -19,6 +17,7 @@ document.onreadystatechange = function () {
   if (document.readyState === "complete") {
     setTimeout(() => {
       loadingElement.style.display = "none";
+      topbar.hide();
     }, 1800);
   }
 };
