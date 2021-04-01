@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
   color: #303030;
@@ -9,7 +9,6 @@
 html {
   font-size: 16px;
   font-size: min(max(1rem, 4vw), 22px);
-  // font-size: clamp(100%, 1rem, 22px);
 }
 
 #loading {
@@ -42,10 +41,6 @@ header {
   align-items: center;
   height: 60px;
   padding: 0 1rem;
-  // background-color: #f7f7f7;
-  // background-image: linear-gradient(top, #f7f7f7, #e7e7e7);
-  // background-image: linear-gradient(top, #f7f7f7, transparent);
-  // box-shadow: 0px 1px 3px #aaa;
   background-color: transparent;
   z-index: 999;
   filter: invert(0.85);
@@ -78,16 +73,20 @@ header a.logo-anchor img {
   // animation-duration: 7.2s;
 }
 
+header a.resume {
+  margin-left: auto;
+  font-size: 1rem;
+  border: 1px solid;
+  padding: 0.2rem 0.6rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 @keyframes hue-rotate {
   @for $i from 0 through 100 {
     #{$i * 1%} {
       filter: hue-rotate(#{$i * 3.6} + deg);
     }
   }
-}
-
-header img {
-  margin-left: auto;
 }
 
 #hero {
@@ -99,7 +98,7 @@ header img {
   align-items: center;
   text-align: center;
   padding: 0 1rem;
-  background-image: url('../assets/herobg2.jpg');
+  // background-image: url('../assets/herobg2.jpg');
   background-size: cover;
   background-position: center;
   background-color: #1b1b1b;
@@ -110,11 +109,7 @@ header img {
   color: rgb(247 247 247 / 75%);
 
   background-clip: text;
-  background-image: linear-gradient(
-    180deg,
-    rgb(255 255 255 / 85%),
-    rgb(255 255 255 / 40%)
-  );
+  background-image: linear-gradient(180deg, rgb(255 255 255 / 85%), rgb(255 255 255 / 40%));
   -webkit-text-fill-color: transparent;
 }
 
@@ -133,11 +128,7 @@ header img {
   // height: 36px;
   color: #1a2228;
   color: rgb(255 255 255 / 50%);
-  background-image: linear-gradient(
-    180deg,
-    rgb(255 255 255 / 65%),
-    rgb(255 255 255 / 50%)
-  );
+  background-image: linear-gradient(180deg, rgb(255 255 255 / 65%), rgb(255 255 255 / 50%));
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -191,7 +182,7 @@ header img {
 }
 
 #about figure .image-container::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   position: absolute;
@@ -200,16 +191,12 @@ header img {
   right: 0;
   bottom: 0;
   border-radius: 50%;
-  background: linear-gradient(
-    -126deg,
-    rgb(0 0 0 / 21%) 0.19%,
-    rgb(0 0 0 / 0%) 54.37%
-  );
+  background: linear-gradient(-126deg, rgb(0 0 0 / 21%) 0.19%, rgb(0 0 0 / 0%) 54.37%);
 }
 
 #about p {
   line-height: 1.7rem;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   max-width: 650px;
   margin: 30px auto;
   text-align: center;
