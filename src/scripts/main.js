@@ -3,7 +3,7 @@ import '../css/loco-base.css';
 import '../css/style.scss';
 
 import topbar from 'topbar';
-import VanillaTilt from 'vanilla-tilt';
+// import VanillaTilt from 'vanilla-tilt';
 
 topbar.show();
 topbar.config({
@@ -14,11 +14,11 @@ const loadingElement = document.querySelector('#loading');
 const heroSection = document.querySelector('#hero');
 const header = document.querySelector('header');
 
-VanillaTilt.init(document.querySelector('.about-figure'), {
-  max: 15,
-  speed: 200,
-  scale: 1.1,
-});
+// VanillaTilt.init(document.querySelector('.about-figure'), {
+//   max: 15,
+//   speed: 200,
+//   scale: 1.1,
+// });
 
 document.onreadystatechange = function () {
   if (document.readyState === 'complete') {
