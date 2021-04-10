@@ -40,7 +40,7 @@ const heroSectionObserver = new IntersectionObserver(
     });
   },
   {
-    rootMargin: '-100px 0px 0px 0px',
+    rootMargin: '-90% 0px 0px 0px',
   }
 );
 
