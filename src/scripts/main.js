@@ -43,13 +43,15 @@ const tech_stack_svgs = document.querySelectorAll('.tech-stack svg');
 const tech_name_div = document.querySelector('.tech-stack-name')
 tech_stack_svgs.forEach(svg => {
   svg.addEventListener('mouseenter', showTechName(svg.dataset.techname));
-  svg.addEventListener('mouseleave', hideTechName());
+  svg.addEventListener('mouseleave', hideTechName);
 })
 
 function showTechName(name) {
-  const t = tech_name_div;
-  t.innerText = name;
-  t.style.display = "block";
+  return () => {
+    const t = tech_name_div;
+    t.innerText = name;
+    t.style.display = "block";
+  }
 }
 
 function hideTechName() {
