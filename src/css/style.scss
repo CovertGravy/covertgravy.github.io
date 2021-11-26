@@ -141,6 +141,7 @@ header a.resume {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  position: relative;
 
   svg {
     width: 1.25rem;
@@ -150,6 +151,9 @@ header a.resume {
   &-name {
     display: none;
     margin-top: 0.5rem;
+    color: #919191;
+    position: absolute;
+    top: 100%;
   }
 }
 
