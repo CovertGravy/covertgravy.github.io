@@ -3,7 +3,6 @@ import '../css/loco-base.css';
 import '../css/style.scss';
 
 import topbar from 'topbar';
-// import VanillaTilt from 'vanilla-tilt';
 
 topbar.show();
 topbar.config({
@@ -13,12 +12,6 @@ topbar.config({
 const loadingElement = document.querySelector('#loading');
 const heroSection = document.querySelector('#hero');
 const header = document.querySelector('header');
-
-// VanillaTilt.init(document.querySelector('.about-figure'), {
-//   max: 15,
-//   speed: 200,
-//   scale: 1.1,
-// });
 
 document.onreadystatechange = function () {
   if (document.readyState === 'complete') {
@@ -45,3 +38,21 @@ const heroSectionObserver = new IntersectionObserver(
 );
 
 heroSectionObserver.observe(heroSection);
+
+const tech_stack_svgs = document.querySelectorAll('.tech-stack svg');
+const tech_name_div = document.querySelector('.tech-stack-name')
+tech_stack_svgs.forEach(svg => {
+  svg.addEventListener('mouseenter', showTechName(svg.dataset.techname));
+  svg.addEventListener('mouseleave', hideTechName());
+})
+
+function showTechName(name) {
+  const t = tech_name_div;
+  t.innerText = name;
+  t.style.display = "block";
+}
+
+function hideTechName() {
+  const t = tech_name_div;
+  t.style.display = "none";
+}
