@@ -62,10 +62,13 @@ function onTechMouseLeave() {
 }
 
 function blurOtherTech(name) {
-  [...tech_stack_svgs].filter(svg => svg.dataset.techname !== name).forEach(blurElement);
+  tech_stack_svgs.forEach(svg => {
+    if(svg.dataset.techname === name) return;
+    blurElement(svg);
+  });
 }
 
 function blurElement(element, apply = true) {
-  apply && element.classList.add('blur-me');
-  !apply && element.classList.remove('blur-me');
+  apply && element.classList.add('blur-tech');
+  !apply && element.classList.remove('blur-tech');
 }

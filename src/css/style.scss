@@ -300,6 +300,8 @@ footer {
   }
 }
 
-.blur-me {
+.blur-tech {
   filter: blur(1px);
+  transform: scale(1.1);
+  transition: all 200ms;
 }
