@@ -146,6 +146,7 @@ header a.resume {
   svg {
     width: 1.25rem;
     aspect-ratio: 1;
+    transition: all 200ms;
   }
 
   &-name {
@@ -302,6 +303,4 @@ footer {
 
 .blur-tech {
   filter: blur(1px);
-  transform: scale(1.1);
-  transition: all 200ms;
 }
