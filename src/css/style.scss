@@ -74,13 +74,42 @@ header a.logo-anchor img {
 }
 
 header a.resume {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-decoration: none;
   margin-left: auto;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border: 2px solid;
-  border-radius: 5px;
-  padding: 0.2rem 0.6rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  font-size: .8rem;
+  padding: .2rem .6rem;
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  overflow: visible;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+
+  }
+  
 }
 
 @keyframes hue-rotate {
