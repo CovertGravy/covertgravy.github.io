@@ -71,8 +71,9 @@ function onTechMouseLeave() {
   return (event) => {
     const t = tech_name_div;
     t.style.display = "none";
+    console.log(event);
     const tech_width = tech_stack.getBoundingClientRect().width;
-    const translatexCalc = `calc(${event.target.getBoundingClientRect().left}px - ${tech_width*2}px)`;
+    const translatexCalc = `calc(${event.target.getBoundingClientRect().left}px - ${event.target.parentElement.offsetLeft}px - ${tech_width / 2}px + ${tech_mirror_shadow.getBoundingClientRect().width/20}px)`;
     tech_mirror_shadow.style.setProperty('--origin-x', translatexCalc);
     tech_mirror_shadow.style.setProperty('--origin-y', '0px');
     tech_mirror_shadow.style.setProperty('--origin-scale', '0');
