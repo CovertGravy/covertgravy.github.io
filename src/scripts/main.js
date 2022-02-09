@@ -39,11 +39,14 @@ const heroSectionObserver = new IntersectionObserver(
 
 heroSectionObserver.observe(heroSection);
 
+const tech_stack = document.querySelector('.tech-stack');
 const tech_stack_svgs = document.querySelectorAll('.tech-stack svg');
-const tech_name_div = document.querySelector('.tech-stack-name')
+const tech_name_div = document.querySelector('.tech-stack-name');
+const tech_mirror_shadow = document.querySelector('.mirror-shadow');
+
 tech_stack_svgs.forEach(svg => {
   svg.addEventListener('mouseenter', onTechMouseEnter(svg.dataset.techname));
-  svg.addEventListener('mouseleave', onTechMouseLeave);
+  svg.addEventListener('mouseleave', onTechMouseLeave());
 })
 
 function onTechMouseEnter(name) {
@@ -52,13 +55,29 @@ function onTechMouseEnter(name) {
     t.innerText = name;
     t.style.display = "block";
     blurOtherTech(name);
+    showMirrorShadow(name);
   }
 }
 
+function showMirrorShadow(name) {
+  const selected_tech_svg = document.querySelector(`.tech-stack svg[data-techname="${name}"]`);
+  tech_mirror_shadow.innerHTML = selected_tech_svg.outerHTML;
+  tech_mirror_shadow.style.setProperty('--origin-x', '0px');
+  tech_mirror_shadow.style.setProperty('--origin-y', '-600%');
+  tech_mirror_shadow.style.setProperty('--origin-scale', '10');
+}
+
 function onTechMouseLeave() {
-  const t = tech_name_div;
-  t.style.display = "none";
-  tech_stack_svgs.forEach(svg => blurElement(svg, false));
+  return (event) => {
+    const t = tech_name_div;
+    t.style.display = "none";
+    const tech_width = tech_stack.getBoundingClientRect().width;
+    const translatexCalc = `calc(${event.target.getBoundingClientRect().left}px - ${tech_width*2}px)`;
+    tech_mirror_shadow.style.setProperty('--origin-x', translatexCalc);
+    tech_mirror_shadow.style.setProperty('--origin-y', '0px');
+    tech_mirror_shadow.style.setProperty('--origin-scale', '0');
+    tech_stack_svgs.forEach(svg => blurElement(svg, false));
+  }
 }
 
 function blurOtherTech(name) {

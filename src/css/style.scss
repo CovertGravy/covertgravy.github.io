@@ -175,7 +175,7 @@ header a.resume {
   svg {
     width: 1.25rem;
     aspect-ratio: 1;
-    transition: all 200ms;
+    transition: all 500ms;
   }
 
   &-name {
@@ -184,6 +184,17 @@ header a.resume {
     color: #919191;
     position: absolute;
     top: 100%;
+  }
+
+  .mirror-shadow {
+    --origin-x: 0px;
+    --origin-y: 0px;
+    --origin-scale: 0px;
+    position: absolute;
+    transform: translateX(var(--origin-x)) translateY(var(--origin-y)) scale(var(--origin-scale));
+    // filter: blur(0.2px) contrast(2);
+    opacity: 0.2;
+    transition: all 500ms;
   }
 }
 
