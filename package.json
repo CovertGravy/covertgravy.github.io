@@ -2,7 +2,7 @@
   "name": "portfolio-v1",
   "version": "1.0.0",
   "description": "Portfolio version 1",
-  "main": "index.js",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/*.html src/index.html",
