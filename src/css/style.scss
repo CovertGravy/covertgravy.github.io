@@ -20,15 +20,33 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f7f7f7;
+  background-color: #282828;
   z-index: 1000;
-}
 
-#loading img {
-  animation-name: hue-rotate;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 1.8s;
+  .mini-logo {
+    width: 82px;
+    height: 82px;
+    position: relative;
+    border: 10px solid #282828;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+                  inset 4px 4px 10px rgba(0,0,0,0.5),
+                  inset -4px -4px 10px rgba(67,67,67,0.5),
+                  4px 4px 10px rgba(0,0,0,0.3);
+      animation-name: waves;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      animation-duration: 1.8s;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 header {
@@ -117,6 +135,22 @@ header a.resume {
     #{$i * 1%} {
       filter: hue-rotate(#{$i * 3.6} + deg);
     }
+  }
+}
+
+@keyframes waves {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0.5;
   }
 }
 
