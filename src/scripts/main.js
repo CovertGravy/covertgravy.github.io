@@ -42,17 +42,31 @@ heroSectionObserver.observe(heroSection);
 const tech_stack_svgs = document.querySelectorAll('.tech-stack svg');
 const tech_name_div = document.querySelector('.tech-stack-name')
 tech_stack_svgs.forEach(svg => {
-  svg.addEventListener('mouseenter', showTechName(svg.dataset.techname));
-  svg.addEventListener('mouseleave', hideTechName());
+  svg.addEventListener('mouseenter', onTechMouseEnter(svg.dataset.techname));
+  svg.addEventListener('mouseleave', onTechMouseLeave);
 })
 
-function showTechName(name) {
-  const t = tech_name_div;
-  t.innerText = name;
-  t.style.display = "block";
+function onTechMouseEnter(name) {
+  return () => {
+    const t = tech_name_div;
+    t.innerText = name;
+    t.style.display = "block";
+    blurOtherTech(name);
+  }
 }
 
-function hideTechName() {
+function onTechMouseLeave() {
   const t = tech_name_div;
   t.style.display = "none";
+  tech_stack_svgs.forEach(svg => blurElement(svg, false));
+}
+
+function blurOtherTech(name) {
+  tech_stack_svgs.forEach(svg => {
+    svg.dataset.techname !== name && blurElement(svg);
+  });
+}
+
+function blurElement({classList}, apply = true) {
+  apply ? classList.add('blur-tech') : classList.remove('blur-tech');
 }
