@@ -3,15 +3,16 @@ import '../css/loco-base.css';
 import '../css/style.scss';
 
 import topbar from 'topbar';
+import { query, queryAll } from './utils';
 
 topbar.show();
 topbar.config({
   shadowColor: 'rgba(0, 0, 0, .1)',
 });
 
-const loadingElement = document.querySelector('#loading');
-const heroSection = document.querySelector('#hero');
-const header = document.querySelector('header');
+const loadingElement = query`#loading`;
+const heroSection = query`#hero`;
+const header = query`header`;
 
 document.onreadystatechange = function () {
   if (document.readyState === 'complete') {
@@ -39,10 +40,10 @@ const heroSectionObserver = new IntersectionObserver(
 
 heroSectionObserver.observe(heroSection);
 
-const tech_stack = document.querySelector('.tech-stack');
-const tech_stack_svgs = document.querySelectorAll('.tech-stack svg');
-const tech_name_div = document.querySelector('.tech-stack-name');
-const tech_mirror_shadow = document.querySelector('.mirror-shadow');
+const tech_stack = query`.tech-stack`;
+const tech_stack_svgs = queryAll`.tech-stack svg`;
+const tech_name_div = query`.tech-stack-name`;
+const tech_mirror_shadow = query`.mirror-shadow`;
 
 tech_stack_svgs.forEach(svg => {
   svg.addEventListener('mouseenter', onTechMouseEnter(svg.dataset.techname));
@@ -60,7 +61,7 @@ function onTechMouseEnter(name) {
 }
 
 function showMirrorShadow(name) {
-  const selected_tech_svg = document.querySelector(`.tech-stack svg[data-techname="${name}"]`);
+  const selected_tech_svg = query(`.tech-stack svg[data-techname="${name}"]`);
   tech_mirror_shadow.innerHTML = selected_tech_svg.outerHTML;
   tech_mirror_shadow.style.setProperty('--origin-x', '0px');
   tech_mirror_shadow.style.setProperty('--origin-y', '-600%');
