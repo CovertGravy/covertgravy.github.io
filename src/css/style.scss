@@ -366,6 +366,17 @@ footer {
       }
     }
   }
+
+  .footer-end {
+    a {
+      font-size: 0.75rem;
+      transition: filter ease-out 200ms;
+
+      &:hover {
+        filter: drop-shadow(1px 3px 1px rgba(0, 0, 0, 0.3));
+      }
+    }
+  }
 }
 
 .blur-tech {
