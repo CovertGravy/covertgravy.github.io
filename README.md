@@ -8,4 +8,4 @@
 
 - gh-pages CI/CD
 
-[website link](https://ashishshaji.me)
+[website link](https://ashishshaji.com)
