@@ -1,10 +1,15 @@
+:root {
+  --bg-clr: #242424;
+  --primary-color-hsl: 182 57% 50%;
+  --primary-text-bg: linear-gradient(180deg, hsl(var(--primary-color-hsl) / 50%), hsl(var(--primary-color-hsl)));
+}
+
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
   color: #303030;
-  --bg-clr: #242424;
 }
 
 html {
@@ -143,7 +148,7 @@ header {
     font-size: min(2.5rem, 10vw);
     color: rgb(247 247 247 / 75%);
     background-clip: text;
-    background-image: linear-gradient(180deg, hsl(119deg 100% 50% / 56%), hsl(109deg 100% 50%));
+    background-image: var(--primary-text-bg);
     -webkit-text-fill-color: transparent;
   }
 
@@ -264,7 +269,7 @@ header {
     font-family: inherit;
     font-size: inherit;
     text-decoration: none;
-    color: #00dcdd;
+    color: hsl(var(--primary-color-hsl));
   }
 }
 
@@ -300,7 +305,7 @@ section h3 {
   font-weight: 300;
   color: rgb(247 247 247 / 75%);
   background-clip: text;
-  background-image: linear-gradient(180deg, hsl(119deg 100% 50% / 56%), hsl(109deg 100% 50%));
+  background-image: var(--primary-text-bg);
   -webkit-text-fill-color: transparent;
 }
 
