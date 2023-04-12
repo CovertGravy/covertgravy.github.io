@@ -1,6 +1,6 @@
 :root {
   --bg-clr: #242424;
-  --primary-color-hsl: 182 57% 50%;
+  --primary-color-hsl: 182 70% 50%;
   --primary-text-bg: linear-gradient(180deg, hsl(var(--primary-color-hsl) / 50%), hsl(var(--primary-color-hsl)));
 }
 
@@ -113,7 +113,7 @@ header {
       white-space: nowrap;
       position: relative;
       overflow: hidden;
-      filter: invert(1);
+      filter: invert(1) brightness(1.5);
       color: #06070d;
 
       &:before {
