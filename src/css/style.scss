@@ -1,5 +1,5 @@
 :root {
-  --bg-clr: #242424;
+  --bg-color: #242424;
   --primary-color-hsl: 182 70% 50%;
   --primary-text-bg: linear-gradient(180deg, hsl(var(--primary-color-hsl) / 50%), hsl(var(--primary-color-hsl)));
 }
@@ -158,10 +158,15 @@ header {
   text-align: center;
   padding: 0 1rem;
   // from svgbackgrounds.com
-  background-color: var(--bg-clr);
+  background-color: var(--bg-color);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='99' height='99' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23202020' %3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='1'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
   background-size: cover;
   background-position: center;
+  position: relative;
+
+  & > :not(.clock) {
+    z-index: 10;
+  }
 
   p:nth-child(1) {
     font-size: min(2.5rem, 10vw);
@@ -233,7 +238,7 @@ header {
   display: grid;
   place-items: center;
   place-content: center;
-  background-color: var(--bg-clr);
+  background-color: var(--bg-color);
 
   figure {
     width: 100%;
@@ -333,7 +338,7 @@ footer {
   place-content: center;
   place-items: center;
   padding: 1rem;
-  background-color: var(--bg-clr);
+  background-color: var(--bg-color);
 
   a {
     text-decoration: none;

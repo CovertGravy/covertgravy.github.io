@@ -1,9 +1,11 @@
 import 'normalize.css';
 import '../css/loco-base.css';
 import '../css/style.scss';
+import '../css/clock.scss';
 
 import topbar from 'topbar';
 import { query, queryAll } from './utils';
+import { hideClock, showClock } from './clock';
 
 topbar.show();
 topbar.config({
@@ -57,6 +59,7 @@ function onTechMouseEnter(name) {
     t.style.display = "block";
     blurOtherTech(name);
     showMirrorShadow(name);
+    hideClock();
   }
 }
 
@@ -79,6 +82,7 @@ function onTechMouseLeave() {
     tech_mirror_shadow.style.setProperty('--origin-y', '0px');
     tech_mirror_shadow.style.setProperty('--origin-scale', '0');
     tech_stack_svgs.forEach(svg => blurElement(svg, false));
+    showClock();
   }
 }
 
